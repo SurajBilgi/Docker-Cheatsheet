@@ -1,4 +1,4 @@
-'''python
+```python
 sudo docker run -it <image-name:tag> ## to start a docker##
 sudo docker exec -it <container id> bash ## To resume an already running docker image##
 sudo docker images ## list all images existing in the machine##
@@ -14,3 +14,4 @@ sudo docker rmi <imagename:tag> ## to remove docker images from the image list##
 sudo docker run -it -v /local/file/path:/docker/file/path image-name:tag## to mount local folders inside docker##
 
 sudo docker run -it --hostname=ANYNAME image-name:tag ## Custom hostname for docker images##
+```
