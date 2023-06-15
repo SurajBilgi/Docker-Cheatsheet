@@ -1,8 +1,16 @@
+
 ```python
 sudo docker run -it <image-name:tag> ## to start a docker##
+```
+```python
 sudo docker exec -it <container id> bash ## To resume an already running docker image##
+```
+```python
 sudo docker images ## list all images existing in the machine##
+```
+```python
 sudo docker ps ## to show currently running docker images##
+```
 sudo docker ps -a ## to show all (running and exited) docker images##
 sudo docker save --output="name.tar/zip/gz" <image-name:tag> ##To save the docker images after making changes##
 sudo docker tag <container ID> <New-Name:Tag> or <your account/repository-name:tag> ## to rename the docker images for easy Push, Pull, Save, Load etc##
