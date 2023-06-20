@@ -1,0 +1,39 @@
+version: "2.3"
+services:
+  va-server:
+    container_name: va_server
+    image: itms:latest
+    environment:
+      - SERVER_IP=192.168.0.168
+    restart: always
+    mem_limit: 2000M
+    # runtime: nvidia
+    volumes:
+    -  ./violations/:/ITMS/violations/
+    -  ./itms_module.py:/ITMS/itms_module.py
+    -  ./streams.txt:/ITMS/streams.txt
+    -  /var/run/docker.sock:/var/run/docker.sock
+    networks:
+    - perimeter-network
+  
+      #db:
+      #  container_name: mongodb
+      #  image: mongo:latest #mongo:4.2.22
+      #  ports:
+      #  - "27017:27017"
+      #  restart: always
+      #  mem_limit: 200M
+      #  volumes:
+      #  - ./facesense_db:/data/db
+      #  #command: [--auth]
+      #  networks:
+      #  - perimeter-network
+ 
+networks:
+  perimeter-network:
+    driver: bridge
+    ipam:
+      config:
+      - gateway: 10.16.239.1
+        subnet: 10.16.239.0/24
+    #driver: default
