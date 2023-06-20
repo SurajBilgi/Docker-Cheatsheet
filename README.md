@@ -68,3 +68,15 @@ sudo docker run -it -v /local/file/path:/docker/file/path image-name:tag
 ```bash
 sudo docker run -it --hostname=ANYNAME image-name:tag 
 ```
+
+#### To Run Docker Compose Files
+```bash
+# Down the Server
+sudo docker-compose -f docker-compose-xyz.yml donw
+
+# Up the Server
+sudo docker-compose -f docker-compose-xyz.yml up -d
+
+```
+
+
