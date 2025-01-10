@@ -24,6 +24,28 @@ sudo docker ps
 sudo docker ps -a 
 ```
 
+#### To remove or Delete exited docker images##
+```bash
+sudo docker system prune 
+```
+
+#### To Create an Image and Start ##
+```bash
+docker create hello-world
+> 6b4f947c74d0a2c3e733bb358f4bc8d62a355f3efa7400c17e8e1aa49516eea0
+docker start -a 6b4f947c74d0a2c3e733bb358f4bc8d62a355f3efa7400c17e8e1aa49516eea0
+```
+
+#### Stop a Container ##
+```bash
+docker stop <container-id>
+```
+
+#### Kill a Container ##
+```bash
+docker kill <container-id>
+```
+
 #### To save the docker images after making changes
 ```bash
 sudo docker save --output="name.tar/zip/gz" <image-name:tag> 
